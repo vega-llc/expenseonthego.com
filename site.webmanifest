@@ -1,0 +1,14 @@
+{
+  "name": "ExpenseOnTheGo",
+  "short_name": "ExpenseOnTheGo",
+  "icons": [
+    {
+      "src": "assets/app/app-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#14834f",
+  "background_color": "#ffffff",
+  "display": "browser"
+}
