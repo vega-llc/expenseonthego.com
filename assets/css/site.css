@@ -723,7 +723,9 @@ h3 {
   }
 
   h2 {
-    font-size: 1.85rem;
+    max-width: 20.5rem;
+    font-size: 1.65rem;
+    overflow-wrap: anywhere;
   }
 
   .hero-subtitle {
@@ -736,8 +738,17 @@ h3 {
     font-size: 1rem;
   }
 
+  .section p,
   .legacy-grid h2,
-  .legacy-grid p {
+  .legacy-grid p,
+  .video-grid h2,
+  .video-grid p,
+  .split-grid h2,
+  .split-grid p,
+  .proof-grid h2,
+  .proof-grid p,
+  .contact-grid h2,
+  .contact-grid p {
     max-width: 20.5rem;
   }
 
