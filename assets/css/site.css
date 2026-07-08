@@ -327,6 +327,31 @@ h3 {
   background: var(--wash);
 }
 
+.video-section {
+  background: #f7fbff;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.video-frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0d1511;
+  box-shadow: var(--shadow);
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
 .steps,
 .feature-grid,
 .pricing-grid {
@@ -614,6 +639,7 @@ h3 {
   .steps,
   .feature-grid,
   .pricing-grid,
+  .video-grid,
   .legacy-grid,
   .split-grid,
   .proof-grid,
