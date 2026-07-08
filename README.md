@@ -13,4 +13,4 @@ Static GitHub Pages site for `expenseonthego.com`, built from the current Expens
 
 ## Publish Target
 
-Create or use a GitHub repository under the `vega-llc` account, push this folder to `main`, then enable GitHub Pages through GitHub Actions if it is not already enabled.
+Publish this static site from the `gh-pages` branch of `vega-llc/ExpenseOnTheGo`. Keep the app source on `main`; do not replace `main` with this website-only tree.
