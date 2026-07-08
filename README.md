@@ -5,7 +5,7 @@ Static GitHub Pages site for `expenseonthego.com`, built from the current Expens
 ## What Is Included
 
 - Updated one-page marketing site in `index.html`
-- Preserved Weebly-era logo, family promotional photo, and original product video in `assets/current-site/`
+- Preserved Weebly-era logo, both family promotional photos, and original product video in `assets/current-site/`
 - Privacy and support pages for App Store metadata
 - Legacy page redirects for old Weebly paths
 - GitHub Pages workflow in `.github/workflows/pages.yml`
