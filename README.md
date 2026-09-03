@@ -13,4 +13,4 @@ Static GitHub Pages site for `expenseonthego.com`, built from the current Expens
 
 ## Publish Target
 
-Publish this static site from the `gh-pages` branch of `vega-llc/ExpenseOnTheGo`. Keep the app source on `main`; do not replace `main` with this website-only tree.
+Publish this static site from `vega-llc/expenseonthego.com`. Keep the iOS app source on `main` in `vega-llc/ExpenseOnTheGo`.
