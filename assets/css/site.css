@@ -131,12 +131,7 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.94) 44%, rgba(255, 255, 255, 0.32) 61%, rgba(255, 255, 255, 0) 100%),
-    url("../current-site/hero-family.png");
-  background-repeat: no-repeat;
-  background-size: auto min(58vh, 430px);
-  background-position: right clamp(1rem, 2vw, 2rem) center;
+  background: linear-gradient(135deg, #f4faf6 0%, #ffffff 48%, #eef6fb 100%);
 }
 
 .hero::after {
@@ -420,7 +415,7 @@ h3 {
 .privacy-panel span,
 .release-list dd,
 .site-footer p {
-  color: var(--muted);
+  color: #d7e0dc;
 }
 
 .legal-copy {
@@ -764,3 +759,14 @@ h3 {
     font-size: 1.35rem;
   }
 }
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+  .button:hover,
+  .button:focus-visible { transform: none; }
+}
+
+/* Keep anchored sections clear of the sticky header */
+[id] { scroll-margin-top: 88px; }
