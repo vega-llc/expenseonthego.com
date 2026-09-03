@@ -8,7 +8,7 @@ Static GitHub Pages site for `expenseonthego.com`, built from the current Expens
 - Preserved Weebly-era logo, both family promotional photos, and original product video in `assets/current-site/`
 - Privacy and support pages for App Store metadata
 - Legacy page redirects for old Weebly paths
-- GitHub Pages workflow in `.github/workflows/pages.yml`
+- GitHub Pages workflow in `.github/workflows/pages.yml` (publishes HTML/assets only, not README)
 - `CNAME` for `expenseonthego.com`
 
 ## Publish Target

@@ -24,12 +24,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Assemble public site
+        run: |
+          mkdir -p _publish
+          rsync -a \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude 'output/' \
+            --exclude 'README.md' \
+            --exclude '_publish/' \
+            ./ _publish/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _publish
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
