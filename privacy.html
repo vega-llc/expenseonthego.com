@@ -6,42 +6,45 @@
     <title>Privacy Policy | ExpenseOnTheGo</title>
     <meta name="description" content="ExpenseOnTheGo privacy policy for receipt, expense, AI, iCloud sync, and subscription data.">
     <link rel="canonical" href="https://expenseonthego.com/privacy">
-    <link rel="icon" href="https://expenseonthego.com/favicon.ico" sizes="any">
-    <link rel="icon" href="https://expenseonthego.com/assets/app/favicon-32.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="https://expenseonthego.com/assets/app/apple-touch-icon.png">
-    <link rel="stylesheet" href="https://expenseonthego.com/assets/css/site.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/app/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/app/apple-touch-icon.png">
+    <link rel="stylesheet" href="/assets/css/site.css">
   </head>
   <body class="policy-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="/" aria-label="ExpenseOnTheGo home">
-        <img src="https://expenseonthego.com/assets/current-site/logo.png" alt="ExpenseOnTheGo">
+        <img src="/assets/current-site/logo.png" alt="ExpenseOnTheGo">
       </a>
       <nav class="site-nav policy-nav" aria-label="Privacy page">
         <a href="/">Home</a>
-        <a href="/terms">Terms</a>
-        <a href="/support">Support</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/support.html">Support</a>
       </nav>
     </header>
     <main id="main" class="section">
       <article class="section-inner legal-copy">
         <p class="section-kicker">Privacy Policy</p>
         <h1>ExpenseOnTheGo Privacy Policy</h1>
-        <p><strong>Effective date:</strong> September 4, 2026</p>
+        <p><strong>Effective date:</strong> September 8, 2026</p>
         <p><strong>Vega LLC collects no data from the ExpenseOnTheGo app.</strong> The app has no user accounts, and Vega LLC operates no servers for it. Your receipts, expenses, reports, identifiers, and app activity are never sent to Vega LLC.</p>
 
         <h2>What Vega LLC collects</h2>
         <p>Nothing from the app. Vega LLC does not collect, receive, sell, rent, share, or use your personal information, expense records, receipt images, or app analytics. The app contains no advertising SDK, analytics SDK, or tracking SDK.</p>
 
         <h2>What stays on your device</h2>
-        <p>ExpenseOnTheGo stores your receipt images, vendors, amounts, dates, categories, accounts, clients, projects, reimbursement states, and notes in a local SwiftData database on your device. The Share extension imports only the images and PDFs you explicitly share with the app. Those files pass through the shared app-group container and remain on your device.</p>
-        <p>Product analytics are also local. The app keeps a capped record of up to 500 events in a JSON file in its app-group container. Only the in-app Analytics screen reads it. The record is never uploaded.</p>
+        <p>ExpenseOnTheGo stores your receipt images, vendors, amounts, dates, categories, accounts, clients, projects, reimbursement states, and notes in a local SwiftData database on your device. The Share extension imports only the images and PDFs you explicitly share with the app. Those files pass through the shared app-group container and are stored locally by default. Imported receipt images can sync to your private iCloud database if you enable Pro iCloud Sync, as described below.</p>
+        <p>Product analytics are also local. The app keeps a capped record of up to 500 events in shared app-group storage for in-app analytics. The record is never uploaded.</p>
 
-        <h2>Receipt scanning and on-device AI</h2>
-        <p>Receipt scanning uses Apple's Vision framework for optical character recognition and Apple Foundation Models for extraction. Both run entirely on your device. If Apple Intelligence is unavailable, the app uses an on-device heuristic parser instead. Receipt images and extracted details do not leave your device for scanning or inference.</p>
+        <h2 id="on-device-ai">Receipt scanning and on-device AI</h2>
+        <p>Receipt scanning uses Apple’s Vision framework to read text from receipt images and Apple Foundation Models to extract details such as vendor, amount, tax, and date on supported devices. Both run on your device. If Apple Intelligence is unavailable or extraction fails, the app uses an on-device rules-based parser. Receipt images, OCR text, and extracted details are not sent to a cloud AI service for scanning or inference. The separate “smart fix” category suggestions use a local keyword table.</p>
 
-        <h2>The Hugging Face exception</h2>
-        <p>Hugging Face is the app's only third-party network connection. This happens only if a Pro user chooses the optional local AI model and taps Download. The app then fetches model files from <a class="text-link" href="https://huggingface.co">huggingface.co</a>. Hugging Face necessarily receives your IP address and standard request and device information, which it logs under its <a class="text-link" href="https://huggingface.co/privacy">privacy policy</a>. Vega LLC does not receive that information. After the download, the model runs entirely on your device, and your receipts and expense data are not sent to Hugging Face.</p>
+        <h2 id="ask-ai">Ask AI chat</h2>
+        <p>Ask AI is a Pro feature that answers questions using a summary of your expense data. That summary includes this month’s and last month’s totals, selected top expenses, reimbursement amounts, examples of unpaid reimbursable receipts, and review counts. Your question and the expense summary are processed on your device using a loaded local model or Apple Foundation Models. Your questions, expense context, and generated answers are not sent to Vega LLC, Hugging Face, or a cloud AI service. Ask AI requires an available on-device model and does not have unrestricted access to your full expense history.</p>
+
+        <h2 id="model-download">The Hugging Face exception</h2>
+        <p>Pro users can optionally download Gemma 3 4B, approximately 2.5 GB, through the app’s local model controls. Gemma can process receipt images directly and support Ask AI, with inference performed locally through MLX. Compatible custom Hugging Face models are also supported; their download sizes and capabilities vary. Model files are fetched from <a class="text-link" href="https://huggingface.co">huggingface.co</a>. Hugging Face necessarily receives your IP address and standard request and device information, which it logs under its <a class="text-link" href="https://huggingface.co/privacy">privacy policy</a>. Vega LLC does not receive that information. The model download does not include your receipt images, OCR text, expense records, or Ask AI questions. Once the files are available, AI inference runs on your device. Apple services used for optional iCloud Sync and subscriptions are described separately below.</p>
 
         <h2>Optional iCloud Sync</h2>
         <p>iCloud Sync is available only to Pro subscribers and is off until you turn it on. When enabled, Apple syncs app data through CloudKit to your own private iCloud database. Apple operates iCloud and CloudKit. Vega LLC cannot access or read that database. <a class="text-link" href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a> governs Apple's processing of iCloud data.</p>
@@ -55,10 +58,10 @@
 
         <h2>Website and support</h2>
         <p>The ExpenseOnTheGo website is a static site hosted by GitHub Pages. It has no sign-in, sets no cookies on behalf of Vega LLC, runs no tracking scripts, and collects no payments. GitHub, like other web hosts, processes visitor IP addresses and standard request information in server logs under its own privacy terms.</p>
-        <p>If you email <a class="text-link" href="mailto:info@expenseonthego.com">info@expenseonthego.com</a>, Vega LLC receives the email address, message, and attachments you choose to send and uses them only to reply, keeping them no longer than needed to handle the conversation. Do not email receipts, taxpayer identifiers, or other sensitive expense information.</p>
+        <p>If you email <a class="text-link" href="mailto:info@expenseonthego.com">info@expenseonthego.com</a>, Vega LLC receives the email address, message, and attachments you choose to send. We use them to respond to your request, including sending the product launch update if you request one, and keep them no longer than needed for that purpose. You can withdraw a launch-update request by emailing us. Do not email receipts, taxpayer identifiers, or other sensitive expense information.</p>
 
         <h2>Retention and deletion</h2>
-        <p>Vega LLC has no app data to retain or delete because the app never sends it to us. Your local data remains until you delete it in the app or delete the app. Deleting ExpenseOnTheGo removes its local data from that device. You can export CSV and PDF reports first if you want to keep a copy.</p>
+        <p>Vega LLC has no app data to retain or delete because the app never sends it to us. Your local data remains until you delete it in the app or delete the app. Deleting ExpenseOnTheGo removes its local database and app files from that device. Sensitive profile identifiers are stored separately in the iOS Keychain; clear those identifiers in the app before deleting it if you want to remove them. You can export CSV and PDF reports first if you want to keep a copy.</p>
         <p>Turning off iCloud Sync stops future syncing but does not by itself delete local or previously synced data. To remove synced ExpenseOnTheGo data from iCloud, delete the app's iCloud data through Apple's iCloud storage settings. Apple controls the retention and deletion of data held in your private iCloud database. Optional model files stay on the device until you remove them in the app or delete the app.</p>
 
         <h2>Your privacy rights</h2>
@@ -80,11 +83,11 @@
     </main>
     <footer class="site-footer">
       <div class="footer-inner">
-        <img src="https://expenseonthego.com/assets/current-site/logo.png" alt="ExpenseOnTheGo">
+        <img src="/assets/current-site/logo.png" alt="ExpenseOnTheGo">
         <nav aria-label="Footer">
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
-          <a href="/support">Support</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/support.html">Support</a>
         </nav>
         <p>Built by Vega LLC.</p>
       </div>
